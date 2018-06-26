@@ -3,7 +3,7 @@
 METIS is short for ML-based Decision Support Information System. 
 Based on the next-generation machine learning, it provides selected information that users really need (i.e., supports users’ decisions) by incorporating a variety of heterogeneous data into a unified modeling framework.
 
-[<img src="https://github.com/postech-di-lab/METIS/blob/figures/using_scenario.png">](http://di.postech.ac.kr/)
+[<img src="https://github.com/postech-di-lab/METIS/master/blob/figures/using_scenario.png">](http://di.postech.ac.kr/)
 
 Our decision support system has four important and differentiated features compared to existing systems and generic technologies.
 
