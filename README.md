@@ -17,7 +17,7 @@ It supports easy and effective modeling on large-scale heterogeneous data based 
 
 It manages dynamic data and models by using incremental learning. In other words, it efficiently reflects the data accumulated over time in the model at the previous time-stamp.
 
-## 3. Privacy-Preserved Learning
+## 3. Privacy-Preserving Learning
 
 It preserves the privacy of user data by using federated model learning. It trains global models and improves their performances by considering a lot of user data without accessing users’ local data.
 
