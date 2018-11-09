@@ -1,0 +1,28 @@
+1\tDVDs
+2\tBooks
+3\tBeauty
+4\tMusic
+5\tTravel
+6\tFood & Drink
+7\tSports & Outdoors
+8\tEntertainment
+9\tHealth
+10\tCiao Cafe
+11\tShopping
+12\tInternet
+13\tSoftware
+14\tHouse & Garden
+15\tEducation & Careers
+16\tCars
+17\tHousehold Appliances
+18\tTelecommunications
+19\tElectronics
+20\tMusical Instruments & Equipment
+21\tComputers
+22\tCameras
+23\tFamily
+24\tGames
+25\tFashion
+26\tAdult Products
+27\tOffice Equipment
+28\tFinance
