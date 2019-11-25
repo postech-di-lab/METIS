@@ -33,7 +33,7 @@ It provides good scalability and efficiency by fully utilizing limited resources
 
 #### Project Manager (PM)
 
-- Ph.D Student Dongha Lee (dongha.lee@postech.ac.kr)
+- Ph.D Student Junsu Cho (junsu7463@postech.ac.kr)
 
 # License
 
