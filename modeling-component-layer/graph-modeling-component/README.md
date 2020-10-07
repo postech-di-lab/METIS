@@ -1,7 +1,7 @@
 Graph modeling component
 ========================
 
-This component contain some model for graph data.
+This component contain some models for graph data. 
 
 ## List of module
 
