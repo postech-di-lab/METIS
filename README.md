@@ -1,4 +1,5 @@
 # METIS
+
 "METIS" is a novel and powerful framework which supports to easily implement a decision support system for a target domain, a target purpose, and a target application using large-scale and heterogeneous data.
 METIS is short for ML-based Decision Support Information System. 
 Based on the next-generation machine learning, it provides selected information that users really need (i.e., supports users’ decisions) by incorporating a variety of heterogeneous data into a unified modeling framework.
