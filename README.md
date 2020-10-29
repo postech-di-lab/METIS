@@ -24,7 +24,7 @@ It preserves the privacy of user data by using federated model learning. It trai
 
 ## 4. Incremental Learning
 
-It provides good scalability and efficiency by fully utilizing limited resources. In terms of model learning, it efficiently processes large-scale data which conventionally can not be handled in a local device, where computation and memory resources are limited.
+It provides good scalability and efficiency by fully utilizing limited resources. In terms of model learning, it efficiently processes large-scale data that conventionally can not be handled in a local device, where computation and memory resources are limited.
 
 # Authors
 
