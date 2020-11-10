@@ -36,3 +36,15 @@ class HGN(nn.Module):
         
         return self.E(item_seq_indices), self.U(user_indices), self.Q(items_to_predict), self.Qb(items_to_predict)
 
+    def feature_gating_layer(self, S_i, u_i):
+        
+        return S_i * torch.sigmoid(self.feature_gate_item( S_i ) + self.feature_gate_user(u_i).unsqueeze(1))
+
+    def instance_gating_layer(self, featg_S_i, u_i):
+        
+        g_score = torch.sigmoid(torch.matmul(featg_S_i, self.instance_gate_item.unsqueeze(0)).squeeze()+ u_i.mm(self.instance_gate_user))
+        instg_S_i = featg_S_i * g_score.unsqueeze(2)
+        instg_S_i = torch.sum(instg_S_i, dim=1)
+        instg_S_i = instg_S_i/ torch.sum(g_score, dim=1).unsqueeze(1)
+
+        return instg_S_i
