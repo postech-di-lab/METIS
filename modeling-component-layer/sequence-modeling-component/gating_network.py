@@ -12,7 +12,7 @@ class HGN(nn.Module):
         L = args.sequence_length
         dims = args.dims
 
-        # padding_idx =0.        
+        # *validation, padding_idx =0.        
         self.U = nn.Embedding(num_users, dims)
         self.E = nn.Embedding(num_items, dims, padding_idx=0)
 
@@ -21,8 +21,8 @@ class HGN(nn.Module):
 
         self.instance_gate_item = Variable(torch.zeros(dims, 1).type(torch.FloatTensor), requires_grad=True).cuda()
         self.instance_gate_user = Variable(torch.zeros(dims, L).type(torch.FloatTensor), requires_grad=True).cuda()
-   
-        #
+        
+        # *validation
         self.instance_gate_item = torch.nn.init.xavier_uniform_(self.instance_gate_item)
         self.instance_gate_user = torch.nn.init.xavier_uniform_(self.instance_gate_user)
 
@@ -30,3 +30,9 @@ class HGN(nn.Module):
         self.Qb = nn.Embedding(num_items, 1, padding_idx=0)
         # weight initialization
         self.Q.weight.data.normal_(0, 1.0 / self.Q.embedding_dim)
+        self.Qb.weight.data.zero_()
+
+    def lookup_layer(self, item_seq_indices, user_indices, items_to_predict):
+        
+        return self.E(item_seq_indices), self.U(user_indices), self.Q(items_to_predict), self.Qb(items_to_predict)
+
