@@ -1,2 +1,2 @@
 ## Model-layer
-This page a README page for Model-Layer.
+This page is a README page for Model-Layer.
