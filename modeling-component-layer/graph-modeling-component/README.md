@@ -1,4 +1,4 @@
-Graph modeling component
+# Graph modeling component
 ========================
 
 This component contains some models for graph data. 
