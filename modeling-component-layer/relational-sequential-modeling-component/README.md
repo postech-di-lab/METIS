@@ -1,4 +1,4 @@
-# **Text-Graph Modeling Component**
+# **Relational-Sequential Modeling Component**
 
 A PyTorch implementation of **Relational-Sequential Modeling Component** that processes sequential data. 
 More specifically, our dataset's line contains an user id, item id, rating and timestamp. 
