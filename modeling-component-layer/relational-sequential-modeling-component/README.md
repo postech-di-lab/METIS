@@ -27,7 +27,7 @@ It was tested for Python 3.7, PyTorch 1.7.0 and CUDA 11.0.
 python main.py
 ```
 
-### To Run
+### To Test
 
 ```none
 python test.py
