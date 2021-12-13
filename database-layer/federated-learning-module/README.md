@@ -21,22 +21,25 @@ pip install -r requirements.txt
 
 Parameter | Default | Description
 --- | :---: | ---
-`--dataset <int>` | 4 | The number of concurrent threads
-`-g <int>` | 16 | The size of a grid
-`-d <int>` | 0 | 0 : build the GCSC file on memory, 1 : build the GCSC file on disk
+`--dataset <str>` | 'mnist' | The name of dataset
+`--model <str>` | 'mlp' | The name of model
+`--gpu` | None | To use cuda, set to a specific GPU ID. Default set to use CPU
+`--epochs <int>` | 10 | The number of rounds of training
+`--lr <float>` | 0.01 | The learning rate
+`--verbose <int>` | 1 | 0: Activate the detailed log outputs, 1: Deactivate
+`--seed <int>` | 1 | The random seed
 
 - **Parameters for federated learning**
 
 Parameter | Default | Description
 --- | :---: | ---
-`-k <int>` | 40 | The rank size of factor matrices
-`-l <float>` | 0.01 | The regularization coefficient
-`-t <int>` | 5 | The number of total iterations
-`-n <int>` | 4 | The number of concurrent threads
-`-g <int>` | 16 | The size of a grid
-`-o <int>` | 0 | 0 : OCAM, 1 : OCAM-opt
+`--iid <int>` | 1 | The distribution of data amongst user. 0: Set to IID, 1: Set to non-IID
+`--num_users <int>` | 100 |The number of users
+`--frac <float>` | 0.1 | The fraction of clients
+`--local_ep <int>` | 10 | The number of local epochs
+`--local_bs <int>` | 10 | The local batch size
+`--unequal <int>` | 0 | Whether to use unequal data splits for non-IID setting. 0: Equal splits, 1: Unequal splits
+
 ## Usage
 
 ## Results
-
-## Reference
