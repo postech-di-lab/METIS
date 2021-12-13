@@ -1,4 +1,4 @@
-# FedAvg: Federated Avaeraging
+# FedAvg: Federated Averaging
 
 ## Overview
 
