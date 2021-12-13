@@ -1,6 +1,7 @@
 # FedAvg: Federated Averaging
 
 ## Overview
+> Recently, the data collected from mobile devices is suitable and abundant for individuals who use devices. At the same time, these data are sensitive to privacy and may be too much to learn on a mobile device. For this reason, there is a difficulty in using the existing approach as it is. To solve this problem, we propose federated learning that to learn a shared model by aggregating locally-computed updates while leaving the training data on the mobile devices. To explain the effectiveness of the methodology, experiments were conducted using simple datasets and models such as MNIST and MLP.
 
 ## Paper
 - [Communication-Efficient Learning of Deep Networks from Decentralized Data (*AISTATS, 2017*)](https://arxiv.org/abs/1602.05629)
