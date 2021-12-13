@@ -3,7 +3,7 @@
 ## Overview
 
 ## Paper
-- Communication-Efficient Learning of Deep Networks from Decentralized Data (*AISTATS, 2017*)
+- [Communication-Efficient Learning of Deep Networks from Decentralized Data (*AISTATS, 2017*)](https://arxiv.org/abs/1602.05629)
   - **H. Brendan McMahan**, Eider Moore, Daniel Ramage, Seth Hampson, Blaise Agiiera y Arcas
 
 ## Reqirements
