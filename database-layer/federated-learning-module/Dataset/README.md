@@ -5,4 +5,5 @@
   - [cifar10](https://www.cs.toronto.edu/~kriz/cifar.html)
   - [fashion_mnist](https://github.com/zalandoresearch/fashion-mnist)
   - [mnist](http://yann.lecun.com/exdb/mnist/)
+- or, it can be downloaded from torchvision datasets.
 - Add the downloaded dataset to each path.
