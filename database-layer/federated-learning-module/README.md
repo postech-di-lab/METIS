@@ -24,7 +24,7 @@ Parameter | Default | Description
 --- | :---: | ---
 `--dataset <str>` | 'mnist' | The name of dataset
 `--model <str>` | 'mlp' | The name of model
-`--gpu` | None | To use cuda, set to a specific GPU ID. Default set to use CPU
+`--gpu <int>` | -1 | To use cuda, set to a specific GPU ID. Default set to use CPU
 `--epochs <int>` | 10 | The number of rounds of training
 `--lr <float>` | 0.01 | The learning rate
 `--verbose <int>` | 1 | 0: Activate the detailed log outputs, 1: Deactivate
@@ -42,5 +42,17 @@ Parameter | Default | Description
 `--unequal <int>` | 0 | Whether to use unequal data splits for non-IID setting. 0: Equal splits, 1: Unequal splits
 
 ## Usage
+
+A. For the baseline (Standard SGD)
+
+```
+python run_baseline.py
+```
+
+B. For the federated learning (Proposed)
+
+```
+python run_federated.py
+```
 
 ## Results
