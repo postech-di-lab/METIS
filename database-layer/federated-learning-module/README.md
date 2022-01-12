@@ -7,6 +7,16 @@
 - [Communication-Efficient Learning of Deep Networks from Decentralized Data (*AISTATS, 2017*)](https://arxiv.org/abs/1602.05629)
   - **H. Brendan McMahan**, Eider Moore, Daniel Ramage, Seth Hampson, Blaise Agiiera y Arcas
 
+## Environments
+```
+Python: 3.6.3 version
+Anaconda: 4.5.4 version
+OS: Ubuntu 16.04.5 LTS
+CPU: Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+GPU: NVIDIA TITAN Xp 12GB
+RAM: 256G
+```
+
 ## Reqirements
 - Install all the packages from requirements.txt in your virtual environment. 
 ```
