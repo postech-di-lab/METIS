@@ -46,13 +46,13 @@ Parameter | Default | Description
 A. For the baseline (Standard SGD)
 
 ```
-python run_baseline.py
+python run_baseline.py --model mlp --dataset mnist --gpu 0
 ```
 
 B. For the federated learning (Proposed)
 
 ```
-python run_federated.py
+python run_federated.py --model mlp --dataset mnist --gpu 0
 ```
 
 ## Results
