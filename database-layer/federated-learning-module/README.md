@@ -56,3 +56,11 @@ python run_federated.py --model mlp --dataset mnist --gpu 0
 ```
 
 ## Results
+
+The experiment was conducted on the MNIST dataset.
+
+Method | Accuracy(%)
+--- | :---: 
+`Baseline` | 92.68 
+`FedAVG` | 91.51 
+
