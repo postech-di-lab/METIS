@@ -118,3 +118,34 @@ class modelC(nn.Module):
         pool_out.squeeze_(-1)
         pool_out.squeeze_(-1)
         return pool_out
+    
+    
+def get_initial_model(args, device, train_dataset):
+    """Return the initialized model
+    """
+    # Build model
+    ## Convolutional neural network
+    if args.model == 'cnn':
+        if args.dataset == 'mnist':
+            global_model = CNNMnist(args=args)
+        elif args.dataset == 'fmnist':
+            global_model = CNNFashion_Mnist(args=args)
+        elif args.dataset == 'cifar':
+            global_model = CNNCifar(args=args)
+    ## Multi-layer preceptron
+    elif args.model == 'mlp':  
+        img_size = train_dataset[0][0].shape
+        len_in = 1
+        for x in img_size:
+            len_in *= x
+            global_model = MLP(dim_in=len_in, dim_hidden=64,
+                               dim_out=args.num_classes)
+    else:
+        exit('Error: unrecognized model')
+        
+    # Set the model to train and send it to device.
+    global_model.to(device)
+    global_model.train()
+    print('# Model summarization')
+    print(global_model)
+    return global_model

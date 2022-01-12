@@ -24,12 +24,12 @@ class DatasetSplit(Dataset):
 
 
 class LocalUpdate(object):
-    def __init__(self, args, dataset, idxs, logger):
+    def __init__(self, args, device, dataset, idxs, logger):
         self.args = args
+        self.device = device
         self.logger = logger
         self.trainloader, self.validloader, self.testloader = self.train_val_test(
             dataset, list(idxs))
-        self.device = 'cuda' if args.gpu else 'cpu'
         # Default criterion set to NLL loss function
         self.criterion = nn.NLLLoss().to(self.device)
 
@@ -111,14 +111,13 @@ class LocalUpdate(object):
         return accuracy, loss
 
 
-def test_inference(args, model, test_dataset):
+def test_inference(args, device, model, test_dataset):
     """ Returns the test accuracy and loss.
     """
 
     model.eval()
     loss, total, correct = 0.0, 0.0, 0.0
 
-    device = 'cuda' if args.gpu else 'cpu'
     criterion = nn.NLLLoss().to(device)
     testloader = DataLoader(test_dataset, batch_size=128,
                             shuffle=False)

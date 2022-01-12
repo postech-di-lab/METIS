@@ -4,31 +4,38 @@
 
 import argparse
 
+import os
+import copy
+import time
+import pickle
+import numpy as np
 from tqdm import tqdm
-import matplotlib.pyplot as plt
 
 import sys
 import pandas as pd
-import numpy as np
 import matplotlib as mpl
 import random
-import os
 
 import torch
-from torch.utils.data import DataLoader
+from tensorboardX import SummaryWriter
 
-from utils import get_dataset, print_arguments, save_loss_curve
-from update import test_inference
+from update import LocalUpdate, test_inference
 from models import MLP, CNNMnist, CNNFashion_Mnist, CNNCifar, get_initial_model
-from train import train_baseline
+from utils import get_dataset, average_weights, print_arguments, save_train_loss_and_acc, save_figures
+from train import train_federated
+
 
 #################################################################################################################
-# Define Run function (Baseline)
+# Define Run function (Federated)
 #################################################################################################################
 def run():
+    start_time = time.time()
     print("="*20,"Settings...","="*20)
+    # Define paths
+    path_project = os.path.abspath('..')
+    logger = SummaryWriter('../logs')
     print_arguments(args)
-        
+
     # Set training device
     if args.gpu != -1:
         device = torch.device("cuda:" + str(args.gpu))
@@ -41,28 +48,37 @@ def run():
     print("="*20,"...Settings","="*20); print() 
     
     print("="*20,"Dataset Load...","="*20)
-    # Load datasets
-    train_dataset, test_dataset, _ = get_dataset(args)
+    # Load dataset and user groups
+    train_dataset, test_dataset, user_groups = get_dataset(args)
     print("="*20,"...Dataset Load","="*20); print()
     
     print("="*20,"Model Initialization...","="*20)
     # Get initialized model
     global_model = get_initial_model(args, device, train_dataset)
-    print("="*20,"...Model Initialization","="*20); print()
 
+    # Copy weights
+    global_weights = global_model.state_dict()
+    print("="*20,"...Model Initialization","="*20); print()
+    
     print("="*20,"Model Training...","="*20)
     # Training
-    global_model, epoch_loss = train_baseline(args, device, global_model, train_dataset)
+    global_model, train_loss, train_accuracy = train_federated(args, device, global_model, global_weights, train_dataset, logger, user_groups)
 
     # Testing
     test_acc, test_loss = test_inference(args, device, global_model, test_dataset)
     print('# Test on', len(test_dataset), 'samples')
-    print("## Test Accuracy: {:.2f}%".format(100*test_acc))
+    print(f'## Results after {args.epochs} global rounds of training:')
+    print("### Avg Train Accuracy: {:.2f}%".format(100*train_accuracy[-1]))
+    print("### Test Accuracy: {:.2f}%".format(100*test_acc))
     
     # Save figure
-    save_loss_curve(args, epoch_loss)
+    save_train_loss_and_acc(args, train_loss, train_accuracy)
+    save_figures(args, train_loss, train_accuracy)
     print("="*20,"...Model Training","="*20); print()
+    
+    print('\n# Total Run Time: {0:0.4f}'.format(time.time()-start_time))
 
+    
 #################################################################################################################
 # Define Arguments and Main function
 #################################################################################################################

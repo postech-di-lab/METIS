@@ -7,7 +7,10 @@ import torch
 from torchvision import datasets, transforms
 from sampling import mnist_iid, mnist_noniid, mnist_noniid_unequal
 from sampling import cifar_iid, cifar_noniid
+import matplotlib
 import matplotlib.pyplot as plt
+
+import pickle
 
 def get_dataset(args):
     """ Returns train and test datasets and a user group which is a dict where
@@ -117,3 +120,39 @@ def save_loss_curve(args, epoch_loss):
     plt.ylabel('Train loss')
     plt.savefig('./Figure/nn_{}_{}_{}.png'.format(args.dataset, args.model, args.epochs))
     print(f'Save the loss curve at ./Figure/nn_{args.dataset}_{args.model}_{args.epochs}.png')
+    
+
+def save_train_loss_and_acc(args, train_loss, train_accuracy):
+    """Save the train loss and accuracy object
+    """
+    file_name = './Figure/objects/{}_{}_{}_C[{}]_iid[{}]_E[{}]_B[{}].pkl'.\
+        format(args.dataset, args.model, args.epochs, args.frac, args.iid,
+               args.local_ep, args.local_bs)
+
+    with open(file_name, 'wb') as f:
+        pickle.dump([train_loss, train_accuracy], f)
+        
+def save_figures(args, train_loss, train_accuracy):
+    """Save the loss and accuracy plot
+    """
+    matplotlib.use('Agg')
+    
+    # Plot Loss curve
+    plt.figure()
+    plt.title('Training Loss vs Communication rounds')
+    plt.plot(range(len(train_loss)), train_loss, color='r')
+    plt.ylabel('Training loss')
+    plt.xlabel('Communication Rounds')
+    plt.savefig('./Figure/fed_{}_{}_{}_C[{}]_iid[{}]_E[{}]_B[{}]_loss.png'.
+                format(args.dataset, args.model, args.epochs, args.frac,
+                       args.iid, args.local_ep, args.local_bs))
+    
+    # Plot Average Accuracy vs Communication rounds
+    plt.figure()
+    plt.title('Average Accuracy vs Communication rounds')
+    plt.plot(range(len(train_accuracy)), train_accuracy, color='k')
+    plt.ylabel('Average Accuracy')
+    plt.xlabel('Communication Rounds')
+    plt.savefig('./Figure/fed_{}_{}_{}_C[{}]_iid[{}]_E[{}]_B[{}]_acc.png'.
+                format(args.dataset, args.model, args.epochs, args.frac,
+                       args.iid, args.local_ep, args.local_bs))
