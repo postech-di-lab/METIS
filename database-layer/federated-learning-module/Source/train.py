@@ -102,23 +102,3 @@ def train_federated(args, device, global_model, global_weights, train_dataset, l
             print('Train Accuracy: {:.2f}% \n'.format(100*train_accuracy[-1]))
             
     return global_model, train_loss, train_accuracy
-            
-            
-#     ##### 여기부터 분할?
-#     # Test inference after completion of training
-#     test_acc, test_loss = test_inference(args, device, global_model, test_dataset)
-
-#     print(f' \n Results after {args.epochs} global rounds of training:')
-#     print("|---- Avg Train Accuracy: {:.2f}%".format(100*train_accuracy[-1]))
-#     print("|---- Test Accuracy: {:.2f}%".format(100*test_acc))
-#     ---- 이거 오케이 된 것 같고
-    
-#     # Saving the objects train_loss and train_accuracy:
-#     file_name = './Figure/objects/{}_{}_{}_C[{}]_iid[{}]_E[{}]_B[{}].pkl'.\
-#         format(args.dataset, args.model, args.epochs, args.frac, args.iid,
-#                args.local_ep, args.local_bs)
-
-#     with open(file_name, 'wb') as f:
-#         pickle.dump([train_loss, train_accuracy], f)
-
-#     print('\n Total Run Time: {0:0.4f}'.format(time.time()-start_time))
