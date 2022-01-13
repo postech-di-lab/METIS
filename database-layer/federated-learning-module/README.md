@@ -32,8 +32,8 @@ pip install -r requirements.txt
 
 Parameter | Default | Description
 --- | :---: | ---
-`--dataset <str>` | 'mnist' | The name of dataset
-`--model <str>` | 'mlp' | The name of model
+`--dataset <str>` | 'mnist' | The name of dataset. mnist, fmnist or cifar.
+`--model <str>` | 'mlp' | The name of model. cnn or mlp.
 `--gpu <int>` | -1 | To use cuda, set to a specific GPU ID. Default set to use CPU
 `--epochs <int>` | 10 | The number of rounds of training
 `--lr <float>` | 0.01 | The learning rate
