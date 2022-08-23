@@ -1,0 +1,14 @@
+I rate music I hear on LAUNCHcast Radio:	never	a few songs since I signed up	a few songs per month	a few songs per week	a few songs per day
+
+If I hear a song I hate I choose to rate it:	never	very infrequently 	infrequently	often	very often 
+
+If I hear a song I don't like I choose to rate it:	never	very infrequently 	infrequently	often	very often 
+
+If I hear a song I feel neutral about I choose to rate it:	never	very infrequently 	infrequently	often	very often 
+
+If I hear a song I like I choose to rate it:	never	very infrequently 	infrequently	often	very often 
+
+If I hear a song I love I choose to rate it:	never	very infrequently 	infrequently	often	very often 
+
+My preferences for a song do not affect whether I choose to rate it:	True - My preferences <b>do not</b> affect my choice to rate	False - My preferences <b>do</b> affect my choice to rate 
+
