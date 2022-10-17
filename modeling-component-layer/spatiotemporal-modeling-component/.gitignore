@@ -1,0 +1,9 @@
+# IGNORE file
+
+__pycache__
+data/*
+!data/split_data.py
+!data/build_recdata.py
+.ipynb_checkpoints/
+results
+nohup.out
