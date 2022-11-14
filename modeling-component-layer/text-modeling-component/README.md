@@ -51,3 +51,38 @@ We download the training dataset using the script provided by SimCSE repository.
 ```
 bash examples/download_nli.bash
 ```
+
+## 3. Conduct experiments
+
+### 3-1. Evaluate semantic textual similarity benchmark without any training
+```
+# Help message
+python -m examples.run_evaluate_sts -h
+
+# One example
+python -m examples.run_evaluate_sts --data-dir data --model bert-rcmd
+```
+
+### 3-2. Train model using self-supervised learning (e.g. SimCSE, CLRCMD)
+```
+python -m examples.run_train --data-dir data --model bert-rcmd
+```
+
+### 3-2. Evaluate benchmark performance on the trained checkpoint
+```
+python -m examples.run_evaluate_sts --data-dir data --model bert-rcmd --checkpoint /home/username/checkpoints/bert-rcmd
+```
+
+### 3-3. Evaluate interpretable semantic textual similarity benchmark
+```
+# Filter out the alignments which has low score
+python -m examples.run_preprocess_ists --alignment-path data/ISTS/test_goldStandard/STSint.testinput.images.wa
+
+# Bert-avg
+python -m examples.run_evaluate_ists --data-dir data/ISTS/test_goldStandard/ --source images --checkpoint-dir checkpoints/bert-avg/
+./data/ISTS/test_goldStandard/evalF1.pl ./data/ISTS/test_goldStandard/STSint.testinput.images.wa.equi ./checkpoints/bert-avg/images.wa
+
+# Bert-Clrcmd
+python -m examples.run_evaluate_ists --data-dir data/ISTS/test_goldStandard/ --source images --checkpoint-dir checkpoints/bert-rcmd/
+./data/ISTS/test_goldStandard/evalF1.pl ./data/ISTS/test_goldStandard/STSint.testinput.images.wa.equi ./checkpoints/bert-rcmd/images.wa
+```
