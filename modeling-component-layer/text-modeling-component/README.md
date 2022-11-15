@@ -86,3 +86,10 @@ python -m examples.run_evaluate_ists --data-dir data/ISTS/test_goldStandard/ --s
 python -m examples.run_evaluate_ists --data-dir data/ISTS/test_goldStandard/ --source images --checkpoint-dir checkpoints/bert-rcmd/
 ./data/ISTS/test_goldStandard/evalF1.pl ./data/ISTS/test_goldStandard/STSint.testinput.images.wa.equi ./checkpoints/bert-rcmd/images.wa
 ```
+
+## 4. Report results
+
+### 4-1. Semantic textual similarity benchmark
+|checkpoint|sts12|sts13|sts14|sts15|sts16|stsb|sickr|avg|
+|----------|-----|-----|-----|-----|-----|----|-----|---|
+|`bert-rcmd`|0.7523|0.8506|0.8099|0.8626|0.8150|0.8521|0.8049|0.8211|
