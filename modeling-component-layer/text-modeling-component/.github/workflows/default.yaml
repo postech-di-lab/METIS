@@ -1,0 +1,12 @@
+on: [push]
+jobs:
+  check-linter:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.8
+    steps:
+    - uses: actions/checkout@v3
+    - run: pip install -r requirements.txt
+    - run: black --check .
+    - run: isort -c .
+    - run: flake8 .
