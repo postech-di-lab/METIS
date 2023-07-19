@@ -38,4 +38,4 @@ It provides good scalability and efficiency by fully utilizing limited resources
 
 # License
 
-The code is licensed under the [MIT License]()
+The code is licensed under the [MIT License]
