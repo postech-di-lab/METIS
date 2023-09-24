@@ -26,6 +26,17 @@ It preserves the privacy of user data by using federated model learning. It trai
 
 It provides good scalability and efficiency by fully utilizing limited resources. In terms of model learning, it efficiently processes large-scale data that conventionally can not be handled in a local device, where computation and memory resources are limited.
 
+# Inference
+[<img src="./blob/figures/Inference.png">]
+
+# User Case
+[<img src="./blob/figures/user_case.png">]
+
+
+# Performance Comparison
+[<img src="./blob/figures/result.png">]
+
+
 # Authors
 
 #### Principal Investigator (PI)
