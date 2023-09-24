@@ -33,13 +33,15 @@ For your inference(testing), a pretrained model and a customized dataset should 
 # Use Cases
 There are two kinds of use cases as shown in the figure below:
 
-(1) A user who bought pendants was recommended necklace chains, tools for securing necklace chains, and other necklace. In fact, this user actually purchased the tool recommended. 
+(1) A user who had bought pendants was recommended necklace chains, tools for securing necklace chains, and other necklace. In fact, this user actually purchased the tool recommended. 
 
-(2) A user who bought supplies for woodworking was recommended items such as DIY paper packs, bags, and other woodworking essentials. This user also purchased the woodworking tools suggested by the recommender.
+(2) A user who had bought supplies for woodworking was recommended items such as DIY paper packs, bags, and other woodworking essentials. This user also purchased the woodworking tools suggested by the recommender.
 
 <img src="./blob/figures/user_case.png">
 
 # Performance Comparison
+This table presents a performance comparsion between our base model(ProxySR++) and AWS, representing the Amazon Personalize Service. As you can see, our model has demonstrated improvements across all evaluation metrics for item recommendations.
+
 <img src="./blob/figures/result.png">
 
 
