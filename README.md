@@ -27,14 +27,14 @@ It preserves the privacy of user data by using federated model learning. It trai
 It provides good scalability and efficiency by fully utilizing limited resources. In terms of model learning, it efficiently processes large-scale data that conventionally can not be handled in a local device, where computation and memory resources are limited.
 
 # Inference
-[<img src="./blob/figures/Inference.png">]
+For your inference(testing), a pretrained model and a customized dataset should be prepared. Then, item recommendations(i.e., next item predictions) are generated through API calls. If you need more information about the inference phase, please feel free to reach out to us.
+<img src="./blob/figures/Inference.png">
 
 # User Case
-[<img src="./blob/figures/user_case.png">]
-
+<img src="./blob/figures/user_case.png">
 
 # Performance Comparison
-[<img src="./blob/figures/result.png">]
+<img src="./blob/figures/result.png">
 
 
 # Authors
