@@ -30,7 +30,13 @@ It provides good scalability and efficiency by fully utilizing limited resources
 For your inference(testing), a pretrained model and a customized dataset should be prepared. Then, item recommendations(i.e., next item predictions) are generated through API calls. If you need more information about the inference phase, please feel free to reach out to us.
 <img src="./blob/figures/Inference.png">
 
-# User Case
+# Use Cases
+There are two kinds of use cases as shown in the figure below:
+
+(1) A user who bought pendants was recommended necklace chains, tools for securing necklace chains, and other necklace. In fact, this user actually purchased the tool recommended. 
+
+(2) A user who bought supplies for woodworking was recommended items such as DIY paper packs, bags, and other woodworking essentials. This user also purchased the woodworking tools suggested by the recommender.
+
 <img src="./blob/figures/user_case.png">
 
 # Performance Comparison
