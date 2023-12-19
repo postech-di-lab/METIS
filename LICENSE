@@ -19,3 +19,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+Following submodules are covered by a different type of licensing protection:
+
+  GNU GENERAL PUBLIC LICENSE:
+    METIS/database-layer/incremental-learning-module/taxocom/
+    METIS/model-layer/anomaly-segmentation-module/WETAS/
+    METIS/model-layer/consensus-learning-module/ConCF/
+    METIS/model-layer/knowledge-distillation-module/DE-RRD/
+    METIS/model-layer/knowledge-distillation-module/HetComp/
+    METIS/modeling-component-layer/relational-modeling-component/Topology_Distillation/
+
+  Creative Commons Public Licenses:
+    METIS/modeling-component-layer/text-modeling-component/
