@@ -57,4 +57,4 @@ This table presents a performance comparsion between our base model(ProxySR++) a
 
 # License
 
-The code is licensed under the [MIT License]()
+The code is licensed under the [MIT License](./LICENSE)
