@@ -1,0 +1,9 @@
+group:
+  - kodialogbench
+  - kodialogbench_dc
+  - kodialogbench_dc_emotion
+dataset_name: dc_emotion_dailydialog
+include: _default_template_yaml
+task: kodialogbench_dc_emotion_dailydialog
+doc_to_text: !function utils.doc_to_text_direct_prompting
+doc_to_choice: "{{options}}"
