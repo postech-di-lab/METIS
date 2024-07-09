@@ -1,0 +1,8 @@
+group:
+  - kodialogbench
+  - kodialogbench_rs
+dataset_name: rs_empathetic
+include: _default_template_yaml
+task: kodialogbench_rs_empathetic
+doc_to_text: !function utils.doc_to_text_response_selection_prompting
+doc_to_choice: "{{options}}"
