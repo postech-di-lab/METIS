@@ -1,0 +1,8 @@
+group:
+  - kodialogbench
+  - kodialogbench_dc
+dataset_name: dc_location_socialdial
+include: _default_template_yaml
+task: kodialogbench_dc_location_socialdial
+doc_to_text: !function utils.doc_to_text_direct_prompting
+doc_to_choice: "{{options}}"
