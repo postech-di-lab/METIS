@@ -1,0 +1,9 @@
+group:
+  - kodialogbench
+  - kodialogbench_dc
+  - kodialogbench_dc_relation
+dataset_name: dc_relation_socialdial-distance
+include: _default_template_yaml
+task: kodialogbench_dc_relation_socialdial-distance
+doc_to_text: !function utils.doc_to_text_direct_prompting
+doc_to_choice: "{{options}}"
