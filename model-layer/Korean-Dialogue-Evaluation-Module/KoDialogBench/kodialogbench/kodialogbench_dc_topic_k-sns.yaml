@@ -1,0 +1,9 @@
+group:
+  - kodialogbench
+  - kodialogbench_dc
+  - kodialogbench_dc_topic
+dataset_name: dc_topic_k-sns
+include: _default_template_yaml
+task: kodialogbench_dc_topic_k-sns
+doc_to_text: !function utils.doc_to_text_direct_prompting
+doc_to_choice: "{{options}}"
