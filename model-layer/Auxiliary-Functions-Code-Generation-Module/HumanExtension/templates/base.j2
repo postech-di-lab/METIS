@@ -1,0 +1,14 @@
+{# Default code structure for humanextension. #}
+{% if imports %}
+{% for path, keywords in imports %}
+{% if path %}from {{ path }} {% endif %}import {{ keywords|join(', ') }}
+{% endfor %}
+
+
+{% endif %}
+{% if auxiliary.code %}
+{{ auxiliary.code }}
+
+
+{% endif %}
+{{ target.code }}

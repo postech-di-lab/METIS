@@ -1,0 +1,13 @@
+Write a Python function `{{ declaration|trim }}` to solve the following problem:
+{{ docstring|trim }}
+
+{% if add_auxiliary_information %}
+You can use a helper function `{{ auxiliary.declaration|trim }}` to solve the problem:
+{{ auxiliary.docstring|trim }}
+
+[PYTHON]
+{{ auxiliary.code|trim }}
+[/PYTHON]
+
+{% endif %}
+Your code should start with a {% if tag_style == "markdown" %}```python{% else %}[PYTHON]{% endif %} tag and end with a {% if tag_style == "markdown" %}```{% else %}[/PYTHON]{% endif %} tag.

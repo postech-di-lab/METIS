@@ -1,0 +1,15 @@
+{% if imports %}
+{{ imports }}
+
+
+{% endif %}
+{% if auxiliary_function %}
+def {{ auxiliary_function.declaration|trim }}:
+    """{{ auxiliary_function.docstring|trim|replace("\n", "\n    ") }}"""
+{{ auxiliary_function.implementation }}
+
+
+{% endif %}
+def {{ target_function.declaration|trim }}:
+{% if target_function.docstring %}    """{{ target_function.docstring|trim|replace("\n", "\n    ") }}"""{% endif %}
+{{ suffix }}

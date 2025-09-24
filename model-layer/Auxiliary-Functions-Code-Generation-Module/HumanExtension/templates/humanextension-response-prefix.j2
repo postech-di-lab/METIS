@@ -1,0 +1,7 @@
+{{ prefix }}{% if add_codeblock %}
+{% if tag_style == "markdown" %}
+```python
+{% else %}
+[PYTHON]
+{% endif %}
+{{ code|trim }}{% endif %}
