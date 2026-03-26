@@ -1,0 +1,32 @@
+사용자 맞춤 논문 추천 시스템에 대한 정확도 성능 평가
+
+[Seed 1] Hit@10 Accuracy=99.207%
+[Seed 1] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_1.txt
+
+[Seed 2] Hit@10 Accuracy=99.225%
+[Seed 2] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_2.txt
+
+[Seed 3] Hit@10 Accuracy=99.297%
+[Seed 3] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_3.txt
+
+[Seed 4] Hit@10 Accuracy=99.315%
+[Seed 4] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_4.txt
+
+[Seed 5] Hit@10 Accuracy=99.207%
+[Seed 5] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_5.txt
+
+[Seed 6] Hit@10 Accuracy=99.279%
+[Seed 6] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_6.txt
+
+[Seed 7] Hit@10 Accuracy=99.153%
+[Seed 7] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_7.txt
+
+[Seed 8] Hit@10 Accuracy=99.207%
+[Seed 8] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_8.txt
+
+[Seed 9] Hit@10 Accuracy=99.243%
+[Seed 9] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_9.txt
+
+[Seed 10] Hit@10 Accuracy=99.243%
+[Seed 10] log 저장 위치: /home/kai0920/Verification/Accuracy-2025/TEST_LOG_SEED_10.txt
+
