@@ -1,6 +1,6 @@
 # Multimodal F³CRec: Federated Continual Recommendation with Early Fusion
 
-This repository provides the PyTorch implementation of the Multimodal Federated Continual Recommendation system. It extends the foundational F³CRec framework (Lim et al., **CIKM 2025**) by integrating CLIP-based visual and textual embeddings to mitigate the cold-start problem and catastrophic forgetting during incremental learning phases.
+This repository provides the PyTorch implementation of the Multimodal Federated Continual Recommendation system. It extends the foundational F³CRec framework (Lim et al., **CIKM 2025**) by integrating visual and textual embeddings to mitigate the cold-start problem, privacy leakage and catastrophic forgetting during incremental learning phases.
 
 ## 📌 Requirements
 
